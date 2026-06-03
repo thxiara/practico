@@ -1,0 +1,30 @@
+:root{
+    --c-claro:#FFF8EB;
+    --c-secundario:#FE6D74;
+    --c-oscuro:#971C21;
+    --c-texto-secundario:#424242;
+    --c-stock-1:#0EAE00;
+    --c-stock-0:#FF0004;
+}
+
+.hero{
+    margin-top:56px;
+    height:calc(100vh - 56px);
+    background-image:url()
+}
+header, body{
+    padding-left: 3em;
+    padding-right: 3em;
+}
+body{
+    background-color:var(--c-claro);
+}
+header{
+    background-color:var(--c-secundario);
+}
+ul{
+    margin:0 !important;
+}
+.nav-link:last-child{
+    padding-right:0 !important;
+}
