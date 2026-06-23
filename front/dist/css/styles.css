@@ -8,10 +8,12 @@ body {
     background-color: var(--color-fondo);
     font-family: Arial, sans-serif;
 }
-header{
-    background-color:var(--color-acento);
-    color:var(--color-fondo);
+
+header {
+    background-color: var(--color-acento);
+    color: var(--color-fondo);
 }
+
 .hero {
     background-image: url('../assets/hero.jpg'); 
     background-size: cover;
@@ -26,13 +28,14 @@ header{
     font-size: 3rem;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
+
 .sidebar-titulo {
     color: var(--color-acento);
     font-weight: bold;
     font-size: 1.1rem;
 }
 
-.categoria-list {
+.categorias {
     list-style: none;
     padding: 0;
 }
@@ -41,21 +44,23 @@ header{
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
     color: var(--color-texto);
-    cursor: pointer;
 }
 
 .categorias li.active {
     color: var(--color-acento);
     font-weight: bold;
 }
+
 .form-check-input:checked {
     background-color: var(--color-acento);
     border-color: var(--color-acento);
 }
+
 .titulo-catalogo {
     color: var(--color-acento);
     font-weight: bold;
 }
+
 .boton-b {
     color: var(--color-acento);
     border: 1px solid var(--color-acento);
@@ -64,12 +69,13 @@ header{
     padding: 0.2rem 2rem;
     font-weight: 500;
 }
-resetearFiltros
+
 .boton-b:hover, 
 .boton-b:focus {
     background-color: var(--color-acento);
     color: white;
 }
+
 .boton-a {
     background-color: var(--color-acento);
     color: rgb(0, 0, 0);

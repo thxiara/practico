@@ -17,130 +17,110 @@
             </ul>
         </nav>
     </header>
+
     <section class="hero d-flex justify-content-end align-items-center text-end pe-5">
         <h1 class="hero-titulo">Encontrá tu próximo<br>libro favorito</h1>
     </section>
+
     <section class="container-fluid py-5 px-lg-5">
       <div class="row">
+        
         <div class="d-none d-lg-block col-lg-2">
             <h5 class="sidebar-titulo">Categorías</h5>
             <ul class="categorias" style="cursor: pointer;">
-                <li id="boton-noficcion">no ficción</li>
-                <li id="boton-ficcion" class="active">ficción</li>
-                <li id="boton-infantil">infantil</li>
+                <li id="boton-noficcion" data-categoria="noficcion">no ficción</li>
+                <li id="boton-ficcion" data-categoria="ficcion" class="active">ficción</li>
+                <li id="boton-infantil" data-categoria="infantil">infantil</li>
             </ul>          
+            
             <h5 class="sidebar-titulo mt-5">Géneros</h5>
+            
             <div id="generos-ficcion">
                 <div class="form-check mb-2">
-                    <input class="form-check-input" type="checkbox" id="checkboxClasicos">
-                    <label class="form-check-label small" for="checkboxClasicos">Clásicos</label>
+                    <input class="form-check-input check-genero" type="checkbox" value="clasicos" id="checkClasicos">
+                    <label class="form-check-label small" for="checkClasicos">Clásicos</label>
                 </div>
                 <div class="form-check mb-2">
-                    <input class="form-check-input" type="checkbox" id="checkboxFantasia">
-                    <label class="form-check-label small" for="checkboxFantasia">Fantasía</label>
+                    <input class="form-check-input check-genero" type="checkbox" value="fantasia" id="checkFantasia">
+                    <label class="form-check-label small" for="checkFantasia">Fantasía</label>
                 </div>
             </div>
+
             <div id="generos-noficcion" class="d-none">
                 <div class="form-check mb-2">
-                    <input class="form-check-input" type="checkbox" id="checkboxBiografias">
-                    <label class="form-check-label small" for="checkboxBiografias">Biografías</label>
+                    <input class="form-check-input check-genero" type="checkbox" value="biografias" id="checkBio">
+                    <label class="form-check-label small" for="checkBio">Biografías</label>
                 </div>
                 <div class="form-check mb-2">
-                    <input class="form-check-input" type="checkbox" id="checkboxHistoria">
-                    <label class="form-check-label small" for="checkboxHistoria">Historia</label>
+                    <input class="form-check-input check-genero" type="checkbox" value="historia" id="checkHist">
+                    <label class="form-check-label small" for="checkHist">Historia</label>
                 </div>
             </div>
+
             <div id="generos-infantil" class="d-none">
                 <div class="form-check mb-2">
-                    <input class="form-check-input" type="checkbox" id="checkboxCuentos">
-                    <label class="form-check-label small" for="checkboxCuentos">Cuentos</label>
+                    <input class="form-check-input check-genero" type="checkbox" value="cuentos" id="checkCuentos">
+                    <label class="form-check-label small" for="checkCuentos">Cuentos</label>
                 </div>
                 <div class="form-check mb-2">
-                    <input class="form-check-input" type="checkbox" id="checkboxEducativos">
-                    <label class="form-check-label small" for="checkboxEducativos">Educativos</label>
+                    <input class="form-check-input check-genero" type="checkbox" value="educativos" id="checkEdu">
+                    <label class="form-check-label small" for="checkEdu">Educativos</label>
                 </div>
             </div>
-            <a class="btn btn-danger mt-3" href="#">Aplicar filtros</a>
+
+            <a class="btn btn-danger mt-3" href="#" id="btn-aplicar">Aplicar filtros</a>
         </div>
+
         <div class="col-12 col-lg-10">
           <h1 class="text-center titulo-catalogo mb-3">Catálogo</h1>
+          
           <div class="d-flex justify-content-center gap-3 mb-5">
             <ul class="nav nav-tabs" id="libros-tabs" role="tablist">
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="fisicos" data-bs-toggle="tab" data-bs-target="#catalogo-fisicos" type="button" role="tab" aria-controls="catalogo-fisicos" aria-selected="true">Libros</button>
+                <button class="nav-link active" id="fisicos" data-bs-toggle="tab" data-bs-target="#catalogo-fisicos" type="button" role="tab">Libros</button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="ebooks" data-bs-toggle="tab" data-bs-target="#catalogo-ebooks" type="button" role="tab" aria-controls="catalogo-ebooks" aria-selected="true">eBooks</button>
+                <button class="nav-link" id="ebooks" data-bs-toggle="tab" data-bs-target="#catalogo-ebooks" type="button" role="tab">eBooks</button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="audiolibros" data-bs-toggle="tab" data-bs-target="#catalogo-audiolibros" type="button" role="tab" aria-controls="catalogo-audiolibros" aria-selected="true">Audiolibros</button>
+                <button class="nav-link" id="audiolibros" data-bs-toggle="tab" data-bs-target="#catalogo-audiolibros" type="button" role="tab">Audiolibros</button>
               </li>
             </ul>
           </div>
 
           <div class="tab-content" id="catalogoss">
+            
             <div class="tab-pane fade show active" id="catalogo-fisicos" role="tabpanel" tabindex="0">
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-                    
-                  <div class="col">
+                    <div class="col tarjeta-libro" data-categoria="ficcion" data-genero="clasicos">
                         <div class="card border-0 bg-transparent h-100">
-                            <img class="card-img-top rounded-0" src="dist/assets/elprinci.jpg">
+                            <img class="card-img-top rounded-0" src="dist/assets/elprinci.jpg" alt="El principito">
                             <div class="card-body px-0 pb-0">
                                 <h6 class="card-title fw-bold mb-1">El principito</h6>
                                 <p class="text-body-secondary small mb-1">Antoine de Saint-Exupéry</p>
-                                <p class="libro-detalles small lh-sm mb-2">
-                                    96 páginas, 1943, nuevo,<br> Tapa dura, <span class="text-success">stock disponible</span>
-                                </p>
+                                <p class="libro-detalles small lh-sm mb-2">96 págs, Tapa dura</p>
                                 <h6 class="fw-bold mb-0">UYU$500</h6>
-                            </div>
-                            <div class="card-footer px-0 border-0 bg-transparent d-lg-none mt-2">
-                                <a class="btn btn-danger w-100 py-1">Agregar al carrito</a>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <div class="col">
-                        <div class="card border-0 bg-transparent h-100">
-                            <img class="card-img-top rounded-0" src="dist/assets/elprinci.jpg">
-                            <div class="card-body px-0 pb-0">
-                                <h6 class="card-title fw-bold mb-1">El principito</h6>
-                                <p class="text-body-secondary small mb-1">Antoine de Saint-Exupéry</p>
-                                <p class="libro-detalles small lh-sm mb-2">
-                                    120 páginas, 1943, nuevo,<br> Tapa blanda, <span class="text-success">stock disponible</span>
-                                </p>
-                                <h6 class="fw-bold mb-0">UYU$500</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              </div>
             <div class="tab-pane fade" id="catalogo-ebooks" role="tabpanel" tabindex="0">
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-                    <div class="col">
-                        <div class="card border-0 bg-transparent h-100">
-                            <div class="card-body px-0 pb-0">
-                                <h4>Acá irían tus eBooks 📱</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <h5 class="text-center py-5">miau miau</h5>
             </div>
 
             <div class="tab-pane fade" id="catalogo-audiolibros" role="tabpanel" tabindex="0">
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-                    <div class="col">
-                        <div class="card border-0 bg-transparent h-100">
-                            <div class="card-body px-0 pb-0">
-                                <h4>Acá irían tus Audiolibros 🎧</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <h5 class="text-center py-5">miau miau</h5>
             </div>
+
+          </div>
         </div>
+
       </div>
     </section>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="dist/js/catalogo.js"></script>
-</body>
+  </body>
 </html>
