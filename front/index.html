@@ -25,12 +25,6 @@
 
     <section class="container-fluid py-5 px-lg-5">
       <div class="row">
-        
-        <div class="d-lg-none d-flex justify-content-center mb-4">
-            <button class="btn boton-b w-100" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral" aria-controls="menuLateral">
-                Mostrar Filtros
-            </button>
-        </div>
 
         <div class="col-lg-2 offcanvas-lg offcanvas-start" tabindex="-1" id="menuLateral" aria-labelledby="menuLateralLabel">
             <div class="offcanvas-header border-bottom">
@@ -57,6 +51,14 @@
                         <input class="form-check-input check-genero" type="checkbox" value="fantasia" id="checkFantasia">
                         <label class="form-check-label small" for="checkFantasia">Fantasía</label>
                     </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input check-genero" type="checkbox" value="distopia" id="checkDistopia">
+                        <label class="form-check-label small" for="checkDistopia">Distopía</label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input check-genero" type="checkbox" value="romance" id="checkRomance">
+                        <label class="form-check-label small" for="checkRomance">Romance</label>
+                    </div>
                 </div>
 
                 <div id="generos-noficcion" class="d-none">
@@ -65,8 +67,16 @@
                         <label class="form-check-label small" for="checkBio">Biografías</label>
                     </div>
                     <div class="form-check mb-2">
-                        <input class="form-check-input check-genero" type="checkbox" value="historia" id="checkHist">
-                        <label class="form-check-label small" for="checkHist">Historia</label>
+                        <input class="form-check-input check-genero" type="checkbox" value="filosofia" id="checkFilo">
+                        <label class="form-check-label small" for="checkFilo">Filosofía</label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input check-genero" type="checkbox" value="cartas" id="checkCarta">
+                        <label class="form-check-label small" for="checkCarta">Cartas</label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input check-genero" type="checkbox" value="psicologia" id="checkPsico">
+                        <label class="form-check-label small" for="checkPsico">Psicología</label>
                     </div>
                 </div>
 
@@ -76,8 +86,12 @@
                         <label class="form-check-label small" for="checkCuentos">Cuentos</label>
                     </div>
                     <div class="form-check mb-2">
-                        <input class="form-check-input check-genero" type="checkbox" value="educativos" id="checkEdu">
-                        <label class="form-check-label small" for="checkEdu">Educativos</label>
+                        <input class="form-check-input check-genero" type="checkbox" value="ilustrados" id="checkIlust">
+                        <label class="form-check-label small" for="checkIlust">Ilustrados</label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input check-genero" type="checkbox" value="actividades" id="checkActi">
+                        <label class="form-check-label small" for="checkActi">Actividades</label>
                     </div>
                 </div>
 
@@ -111,30 +125,321 @@
             <div class="tab-pane fade show active" id="catalogo-fisicos" role="tabpanel" tabindex="0">
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
                     
-                    <div class="col tarjeta-libro" data-categoria="ficcion" data-genero="clasicos">
+                    <div class="col tarjeta-libro h-100" data-categoria="ficcion" data-genero="clasicos">
                         <div class="card border-0 bg-transparent h-100 flex-row flex-lg-column gap-3 align-items-center align-items-lg-start">
-                            
                             <div class="col-4 col-lg-12">
                                 <img class="img-fluid rounded" src="dist/assets/portadas/elprincipito.jpg">
                             </div>
-                            
                             <div class="card-body col-8 col-lg-12 p-0 text-start pe-3 pe-lg-0 d-flex flex-column h-100 w-100">
                                 <h6 class="card-title fw-bold mb-1">
                                     El principito
                                 </h6>
                                 <p class="text-body-secondary mb-1 small">Por: Antoine de Saint-Exupéry</p>
                                 <div class="detalles-precio mt-0">
-                                    <p class="lh-sm mb-1 text-dark small">96 páginas - tapa dura</p>
+                                    <p class="lh-sm mb-1 text-dark small">96 páginas - español</p>
                                     <h6 class="fw-bold">UYU$500</h6>
                                 </div>
-
                                 <div class="boton-libro mt-auto w-100">
                                     <button class="btn boton-a py-2 fw-bold">Agregar al carrito</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="col tarjeta-libro h-100" data-categoria="ficcion" data-genero="distopia">
+                        <div class="card border-0 bg-transparent h-100 flex-row flex-lg-column gap-3 align-items-center align-items-lg-start">
+                            <div class="col-4 col-lg-12">
+                                <img class="img-fluid rounded" src="dist/assets/portadas/mundo_feliz.webp">
+                            </div>
+                            <div class="card-body col-8 col-lg-12 p-0 text-start pe-3 pe-lg-0 d-flex flex-column h-100 w-100">
+                                <h6 class="card-title fw-bold mb-1">
+                                    Un mundo feliz
+                                </h6>
+                                <p class="text-body-secondary mb-1 small">Por: Aldous Huxley</p>
+                                <div class="detalles-precio mt-0">
+                                    <p class="lh-sm mb-1 text-dark small">256 páginas - español</p>
+                                    <h6 class="fw-bold">UYU$450</h6>
+                                </div>
+                                <div class="boton-libro mt-auto w-100">
+                                    <button class="btn boton-a py-2 fw-bold">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="col tarjeta-libro h-100" data-categoria="noficcion" data-genero="biografias">
+                        <div class="card border-0 bg-transparent h-100 flex-row flex-lg-column gap-3 align-items-center align-items-lg-start"> 
+                            <div class="col-4 col-lg-12">
+                                <img class="img-fluid rounded" src="dist/assets/portadas/meinkampf.webp">
+                            </div>
+                            <div class="card-body col-8 col-lg-12 p-0 text-start pe-3 pe-lg-0 d-flex flex-column h-100 w-100">
+                                <h6 class="card-title fw-bold mb-1">
+                                    Mein Kampf
+                                </h6>
+                                <p class="text-body-secondary mb-1 small">Por: Adolf Hitler</p>
+                                <div class="detalles-precio mt-0">
+                                    <p class="lh-sm mb-1 text-dark small">556 páginas - español</p>
+                                    <h6 class="fw-bold">UYU$900</h6>
+                                </div>
+                                <div class="boton-libro mt-auto w-100">
+                                    <button class="btn boton-a py-2 fw-bold">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col tarjeta-libro h-100" data-categoria="noficcion" data-genero="cartas">
+                        <div class="card border-0 bg-transparent h-100 flex-row flex-lg-column gap-3 align-items-center align-items-lg-start"> 
+                            <div class="col-4 col-lg-12">
+                                <img class="img-fluid rounded" src="dist/assets/portadas/deprofundis.webp">
+                            </div>
+                            <div class="card-body col-8 col-lg-12 p-0 text-start pe-3 pe-lg-0 d-flex flex-column h-100 w-100">
+                                <h6 class="card-title fw-bold mb-1">
+                                    De Profundis
+                                </h6>
+                                <p class="text-body-secondary mb-1 small">Por: Oscar Wilde</p>
+                                <div class="detalles-precio mt-0">
+                                    <p class="lh-sm mb-1 text-dark small">232 páginas - inglés</p>
+                                    <h6 class="fw-bold">UYU$500</h6>
+                                </div>
+                                <div class="boton-libro mt-auto w-100">
+                                    <button class="btn boton-a py-2 fw-bold">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col tarjeta-libro h-100" data-categoria="noficcion" data-genero="filosofia">
+                        <div class="card border-0 bg-transparent h-100 flex-row flex-lg-column gap-3 align-items-center align-items-lg-start"> 
+                            <div class="col-4 col-lg-12">
+                                <img class="img-fluid rounded" src="dist/assets/portadas/taoteking.webp">
+                            </div>
+                            <div class="card-body col-8 col-lg-12 p-0 text-start pe-3 pe-lg-0 d-flex flex-column h-100 w-100">
+                                <h6 class="card-title fw-bold mb-1">
+                                    Tao Te King
+                                </h6>
+                                <p class="text-body-secondary mb-1 small">Por: Lao Tse</p>
+                                <div class="detalles-precio mt-0">
+                                    <p class="lh-sm mb-1 text-dark small">112 páginas - español</p>
+                                    <h6 class="fw-bold">UYU$350</h6>
+                                </div>
+                                <div class="boton-libro mt-auto w-100">
+                                    <button class="btn boton-a py-2 fw-bold">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col tarjeta-libro h-100" data-categoria="ficcion" data-genero="romance">
+                        <div class="card border-0 bg-transparent h-100 flex-row flex-lg-column gap-3 align-items-center align-items-lg-start"> 
+                            <div class="col-4 col-lg-12">
+                                <img class="img-fluid rounded" src="dist/assets/portadas/remnantsfilth.webp">
+                            </div>
+                            <div class="card-body col-8 col-lg-12 p-0 text-start pe-3 pe-lg-0 d-flex flex-column h-100 w-100">
+                                <h6 class="card-title fw-bold mb-1">
+                                    Remnants of filth vol.1
+                                </h6>
+                                <p class="text-body-secondary mb-1 small">Por: Meatbun</p>
+                                <div class="detalles-precio mt-0">
+                                    <p class="lh-sm mb-1 text-dark small">440 páginas - inglés</p>
+                                    <h6 class="fw-bold">UYU$1000</h6>
+                                </div>
+                                <div class="boton-libro mt-auto w-100">
+                                    <button class="btn boton-a py-2 fw-bold">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col tarjeta-libro h-100" data-categoria="ficcion" data-genero="clasicos">
+                        <div class="card border-0 bg-transparent h-100 flex-row flex-lg-column gap-3 align-items-center align-items-lg-start"> 
+                            <div class="col-4 col-lg-12">
+                                <img class="img-fluid rounded" src="dist/assets/portadas/crimenycastigo.webp">
+                            </div>
+                            <div class="card-body col-8 col-lg-12 p-0 text-start pe-3 pe-lg-0 d-flex flex-column h-100 w-100">
+                                <h6 class="card-title fw-bold mb-1">
+                                    Crimen y Castigo
+                                </h6>
+                                <p class="text-body-secondary mb-1 small">Por: Fyodor Dostoyevsky</p>
+                                <div class="detalles-precio mt-0">
+                                    <p class="lh-sm mb-1 text-dark small">746 páginas - español</p>
+                                    <h6 class="fw-bold">UYU$2000</h6>
+                                </div>
+                                <div class="boton-libro mt-auto w-100">
+                                    <button class="btn boton-a py-2 fw-bold">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col tarjeta-libro h-100" data-categoria="ficcion" data-genero="fantasia">
+                        <div class="card border-0 bg-transparent h-100 flex-row flex-lg-column gap-3 align-items-center align-items-lg-start"> 
+                            <div class="col-4 col-lg-12">
+                                <img class="img-fluid rounded" src="dist/assets/portadas/legendofexorcism.jpg">
+                            </div>
+                            <div class="card-body col-8 col-lg-12 p-0 text-start pe-3 pe-lg-0 d-flex flex-column h-100 w-100">
+                                <h6 class="card-title fw-bold mb-1">
+                                    Legend of Exorcism vol.1
+                                </h6>
+                                <p class="text-body-secondary mb-1 small">Por: FTYX</p>
+                                <div class="detalles-precio mt-0">
+                                    <p class="lh-sm mb-1 text-dark small">384 páginas - inglés</p>
+                                    <h6 class="fw-bold">UYU$900</h6>
+                                </div>
+                                <div class="boton-libro mt-auto w-100">
+                                    <button class="btn boton-a py-2 fw-bold">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col tarjeta-libro h-100" data-categoria="ficcion" data-genero="clasicos">
+                        <div class="card border-0 bg-transparent h-100 flex-row flex-lg-column gap-3 align-items-center align-items-lg-start"> 
+                            <div class="col-4 col-lg-12">
+                                <img class="img-fluid rounded" src="dist/assets/portadas/indignodeserhumano.webp">
+                            </div>
+                            <div class="card-body col-8 col-lg-12 p-0 text-start pe-3 pe-lg-0 d-flex flex-column h-100 w-100">
+                                <h6 class="card-title fw-bold mb-1">
+                                    Indigno de ser humano
+                                </h6>
+                                <p class="text-body-secondary mb-1 small">Por: Osamu Dazai</p>
+                                <div class="detalles-precio mt-0">
+                                    <p class="lh-sm mb-1 text-dark small">124 páginas - español</p>
+                                    <h6 class="fw-bold">UYU$340</h6>
+                                </div>
+                                <div class="boton-libro mt-auto w-100">
+                                    <button class="btn boton-a py-2 fw-bold">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col tarjeta-libro h-100" data-categoria="ficcion" data-genero="clasicos">
+                        <div class="card border-0 bg-transparent h-100 flex-row flex-lg-column gap-3 align-items-center align-items-lg-start"> 
+                            <div class="col-4 col-lg-12">
+                                <img class="img-fluid rounded" src="dist/assets/portadas/carmilla.webp">
+                            </div>
+                            <div class="card-body col-8 col-lg-12 p-0 text-start pe-3 pe-lg-0 d-flex flex-column h-100 w-100">
+                                <h6 class="card-title fw-bold mb-1">
+                                    Carmilla
+                                </h6>
+                                <p class="text-body-secondary mb-1 small">Por: Joseph Le Fanu</p>
+                                <div class="detalles-precio mt-0">
+                                    <p class="lh-sm mb-1 text-dark small">136 páginas - inglés</p>
+                                    <h6 class="fw-bold">UYU$392</h6>
+                                </div>
+                                <div class="boton-libro mt-auto w-100">
+                                    <button class="btn boton-a py-2 fw-bold">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  
+                    <div class="col tarjeta-libro h-100" data-categoria="noficcion" data-genero="psicologia">
+                        <div class="card border-0 bg-transparent h-100 flex-row flex-lg-column gap-3 align-items-center align-items-lg-start"> 
+                            <div class="col-4 col-lg-12">
+                                <img class="img-fluid rounded" src="dist/assets/portadas/righteous_mind.webp">
+                            </div>
+                            <div class="card-body col-8 col-lg-12 p-0 text-start pe-3 pe-lg-0 d-flex flex-column h-100 w-100">
+                                <h6 class="card-title fw-bold mb-1">
+                                    The Righteous Mind
+                                </h6>
+                                <p class="text-body-secondary mb-1 small">Por: Jonathan Haidt</p>
+                                <div class="detalles-precio mt-0">
+                                    <p class="lh-sm mb-1 text-dark small">528 páginas - inglés</p>
+                                    <h6 class="fw-bold">UYU$800</h6>
+                                </div>
+                                <div class="boton-libro mt-auto w-100">
+                                    <button class="btn boton-a py-2 fw-bold">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+
+                    <div class="col tarjeta-libro h-100" data-categoria="infantil" data-genero="cuentos">
+                        <div class="card border-0 bg-transparent h-100 flex-row flex-lg-column gap-3 align-items-center align-items-lg-start"> 
+                            <div class="col-4 col-lg-12">
+                                <img class="img-fluid rounded" src="dist/assets/portadas/alicia.jpg">
+                            </div>
+                            <div class="card-body col-8 col-lg-12 p-0 text-start pe-3 pe-lg-0 d-flex flex-column h-100 w-100">
+                                <h6 class="card-title fw-bold mb-1">
+                                    Alicia en el país de las maravillas
+                                </h6>
+                                <p class="text-body-secondary mb-1 small">Por: Lewis Carroll</p>
+                                <div class="detalles-precio mt-0">
+                                    <p class="lh-sm mb-1 text-dark small">144 páginas - español</p>
+                                    <h6 class="fw-bold">UYU$390</h6>
+                                </div>
+                                <div class="boton-libro mt-auto w-100">
+                                    <button class="btn boton-a py-2 fw-bold">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col tarjeta-libro h-100" data-categoria="infantil" data-genero="ilustrados">
+                        <div class="card border-0 bg-transparent h-100 flex-row flex-lg-column gap-3 align-items-center align-items-lg-start"> 
+                            <div class="col-4 col-lg-12">
+                                <img class="img-fluid rounded" src="dist/assets/portadas/monstruo_colores.webp">
+                            </div>
+                            <div class="card-body col-8 col-lg-12 p-0 text-start pe-3 pe-lg-0 d-flex flex-column h-100 w-100">
+                                <h6 class="card-title fw-bold mb-1">
+                                    El monstruo de colores
+                                </h6>
+                                <p class="text-body-secondary mb-1 small">Por: Anna Llenas</p>
+                                <div class="detalles-precio mt-0">
+                                    <p class="lh-sm mb-1 text-dark small">46 páginas - español</p>
+                                    <h6 class="fw-bold">UYU$800</h6>
+                                </div>
+                                <div class="boton-libro mt-auto w-100">
+                                    <button class="btn boton-a py-2 fw-bold">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col tarjeta-libro h-100" data-categoria="infantil" data-genero="cuentos">
+                        <div class="card border-0 bg-transparent h-100 flex-row flex-lg-column gap-3 align-items-center align-items-lg-start"> 
+                            <div class="col-4 col-lg-12">
+                                <img class="img-fluid rounded" src="dist/assets/portadas/gato_sombrero.jpg">
+                            </div>
+                            <div class="card-body col-8 col-lg-12 p-0 text-start pe-3 pe-lg-0 d-flex flex-column h-100 w-100">
+                                <h6 class="card-title fw-bold mb-1">
+                                    El gato ensombrerado
+                                </h6>
+                                <p class="text-body-secondary mb-1 small">Por: Dr. Seuss</p>
+                                <div class="detalles-precio mt-0">
+                                    <p class="lh-sm mb-1 text-dark small">72 páginas - español</p>
+                                    <h6 class="fw-bold">UYU$200</h6>
+                                </div>
+                                <div class="boton-libro mt-auto w-100">
+                                    <button class="btn boton-a py-2 fw-bold">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col tarjeta-libro h-100" data-categoria="infantil" data-genero="actividades">
+                        <div class="card border-0 bg-transparent h-100 flex-row flex-lg-column gap-3 align-items-center align-items-lg-start"> 
+                            <div class="col-4 col-lg-12">
+                                <img class="img-fluid rounded" src="dist/assets/portadas/colores.jpg">
+                            </div>
+                            <div class="card-body col-8 col-lg-12 p-0 text-start pe-3 pe-lg-0 d-flex flex-column h-100 w-100">
+                                <h6 class="card-title fw-bold mb-1">
+                                    Aprende los colores
+                                </h6>
+                                <p class="text-body-secondary mb-1 small">Por: Varios autores</p>
+                                <div class="detalles-precio mt-0">
+                                    <p class="lh-sm mb-1 text-dark small">12 páginas - español</p>
+                                    <h6 class="fw-bold">UYU$230</h6>
+                                </div>
+                                <div class="boton-libro mt-auto w-100">
+                                    <button class="btn boton-a py-2 fw-bold">Agregar al carrito</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
             </div>
 
             <div class="tab-pane fade" id="catalogo-ebooks" role="tabpanel" tabindex="0">

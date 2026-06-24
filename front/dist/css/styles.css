@@ -62,7 +62,6 @@ header {
     color: white;
     font-size: 0.8em;
     border-radius: 4px;
-    width:100%;
 }
 
 .boton-a:hover {
@@ -98,7 +97,7 @@ header {
     border: 2px solid var(--color-acento);
     font-weight: bold;
 }
-/*Cards de libros en pc*/
+/*Cards de libros*/
 @media (min-width: 992px) {
     .boton-libro {
         display: none;
